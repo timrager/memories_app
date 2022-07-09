@@ -17,8 +17,10 @@ app.use('/posts', postRoutes);
 const CONNECTION_URL = 'mongodb+srv://defaultuser:defaultuser@cluster0.9jp0a.mongodb.net/?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5050;
 
-mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true})
   .then(() => app.listen((PORT), () => console.log(`Server running on port: ${PORT}`)))
   .catch((error) => console.log(error.message));
 
-// mongoose.set('useFindAndModify', false);
+mongoose.set('useFindAndModify', false);
+
+//mongoose.connect(CONNECTION_URL, { useFindAndModify: false });
