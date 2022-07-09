@@ -33,14 +33,14 @@ const Form = ({currentId, setCurrentId}) => {
   }
 
   const cancel = () => {
-    setCurrentId(null)
+    setCurrentId(null);
     setPostData({
       creator: '',
       title: '',
       message: '',
       tags: '',
       selectedFile: ''
-    })
+    });
   }
 
   return (
