@@ -1,11 +1,11 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Container, Grow, Grid } from '@material-ui/core';
 
+import { getPosts } from '../../actions/posts';
 import Posts from '../Posts/Posts';
 import Form from '../Form/Form';
-import { getPosts } from '../../actions/posts';
+
 import useStyles from './styles';
 
 const Home = () => {
